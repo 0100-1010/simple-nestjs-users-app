@@ -45,6 +45,26 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Usage example
+
+POST <http://localhost:444/users>
+Body:
+{
+ "username": "Test user",
+ "settings": {
+  "receiveNotifications": true,
+  "receiveEmails": false
+ }
+}
+
+POST <http://localhost:444/posts>
+Body:
+{
+ "userId": "6693a61d91f0a9b9262acda1",
+ "title": "Test Post",
+ "contents": "Lorem ipsum dolor sit amet..."
+}
+
 ## Test
 
 ```bash
