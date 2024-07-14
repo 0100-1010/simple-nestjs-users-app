@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 import {
+  // ValidationPipe,
   HttpException,
+  // UsePipes,
   Controller,
   Delete,
   Patch,
@@ -8,8 +10,6 @@ import {
   Body,
   Post,
   Get,
-  // UsePipes,
-  // ValidationPipe,
 } from '@nestjs/common';
 
 import { CreateUserDto } from './dto/CreateUser.dto';
@@ -26,9 +26,12 @@ export class UsersController {
   }
 
   @Post()
-  //? if just using validation on this controller...
-  //? but we're applying validation to all, so check
-  //? main.ts where we use app.useGlobalPipes(new ValidationPipe());
+  /*
+   * if just using validation on this controller
+   * then use @UsePipes(new ValidationPipe())
+   * but we're applying validation to all, so check
+   * main.ts where we use app.useGlobalPipes(new ValidationPipe());
+   */
   // @UsePipes(new ValidationPipe())
   createUser(@Body() createUserDto: CreateUserDto) {
     return this.usersService.createUser(createUserDto);
