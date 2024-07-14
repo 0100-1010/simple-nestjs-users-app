@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Module } from '@nestjs/common';
 
 import { UsersModule } from './users/users.module';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { UsersModule } from './users/users.module';
       isGlobal: true,
     }),
     UsersModule,
+    PostsModule,
   ],
   controllers: [],
   providers: [],

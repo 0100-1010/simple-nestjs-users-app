@@ -1,4 +1,12 @@
-import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { Type } from 'class-transformer';
+import {
+  ValidateNested,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+} from 'class-validator';
+
+import { UserSettingsDto } from './UserSettings.dto';
 
 export class CreateUserDto {
   @IsNotEmpty()
@@ -8,4 +16,9 @@ export class CreateUserDto {
   @IsString()
   @IsOptional()
   displayName?: string;
+
+  @IsOptional()
+  @ValidateNested()
+  @Type(() => UserSettingsDto)
+  settings?: UserSettingsDto;
 }
