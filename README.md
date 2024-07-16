@@ -1,6 +1,6 @@
 ## Description
 
-A simple REST API app using [NestJS](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo-small.svg" width="30" alt="Nest Logo" />
+A simple REST API app using [NestJS](https://github.com/nestjs/nest) <img src="https://nestjs.com/img/logo-small.svg" width="20" alt="Nest Logo" />
 
 ## Installation
 
